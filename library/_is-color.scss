@@ -1,0 +1,30 @@
+@use 'is-type' as *;
+
+/// @name is-color
+/// @since 1.0.0
+/// @access public
+/// @author Haba Kudzaev (therteenten)
+/// @example scss Пример использования в Sass (SCSS)
+/// 	$number: 0;
+/// 	$string: 'sassify';
+/// 	$color: #fff;
+/// 	$list: a b c;
+/// 	$map: (
+/// 		a: '0',
+/// 		b: '1'
+/// 	);
+/// 	$bool: true;
+/// 	$null: null;
+///
+/// 	@debug sassify.is-color($number); //=> false
+/// 	@debug sassify.is-color($string); //=> false
+/// 	@debug sassify.is-color($color); //=> true
+/// 	@debug sassify.is-color($list); //=> false
+/// 	@debug sassify.is-color($map); //=> false
+/// 	@debug sassify.is-color($bool); //=> false
+/// @return {Bool}
+/// @param {Color} $value - переменная, тип которой мы хотим сопоставить
+/// 	Sass-типу `Color`
+@function is-color($value) {
+	@return is-type($value) == color;
+}
