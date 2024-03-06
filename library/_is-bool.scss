@@ -1,0 +1,30 @@
+@use 'is-type' as *;
+
+/// @name is-bool
+/// @since 1.0.0
+/// @access public
+/// @author Haba Kudzaev (therteenten)
+/// @example scss Пример использования в Sass (SCSS)
+/// 	$number: 0;
+/// 	$string: 'sassify';
+/// 	$color: #fff;
+/// 	$list: a b c;
+/// 	$map: (
+/// 		a: '0',
+/// 		b: '1'
+/// 	);
+/// 	$bool: true;
+/// 	$null: null;
+///
+/// 	@debug sassify.is-bool($number); //=> false
+/// 	@debug sassify.is-bool($string); //=> false
+/// 	@debug sassify.is-bool($color); //=> false
+/// 	@debug sassify.is-bool($list); //=> false
+/// 	@debug sassify.is-bool($map); //=> false
+/// 	@debug sassify.is-bool($bool); //=> true
+/// @return {Bool}
+/// @param {Bool} $value - переменная, тип которой мы хотим сопоставить
+/// 	Sass-типу `Bool` (Boolean)
+@function is-bool($value) {
+	@return is-type($value) == bool;
+}
