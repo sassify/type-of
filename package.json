@@ -1,6 +1,6 @@
 {
   "name": "@sassify/type-of",
-  "version": "1.0.0",
+  "version": "1.0.1",
   "description": "Набор утилит (функций на языке CSS-препроцессора Sass) для определения типов данных",
   "main": "index.scss",
   "scripts": {

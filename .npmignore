@@ -1,0 +1,8 @@
+.github/
+.vscode/
+tests/
+.commitizen.js
+.commitlint.js
+.editorconfig
+.gitignore
+CODEOWNERS
