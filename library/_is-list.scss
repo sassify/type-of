@@ -1,0 +1,31 @@
+@use 'is-type' as *;
+
+/// @name is-list
+/// @since 1.0.0
+/// @access public
+/// @author Haba Kudzaev (therteenten)
+/// @example scss Пример использования в Sass (SCSS)
+/// 	$number: 0;
+/// 	$string: 'sassify';
+/// 	$color: #fff;
+/// 	$list: a b c;
+/// 	$map: (
+/// 		a: '0',
+/// 		b: '1'
+/// 	);
+/// 	$bool: true;
+/// 	$null: null;
+///
+/// 	@debug sassify.is-list($number); //=> false
+/// 	@debug sassify.is-list($string); //=> false
+/// 	@debug sassify.is-list($color); //=> false
+/// 	@debug sassify.is-list($list); //=> true
+/// 	@debug sassify.is-list($map); //=> false
+/// 	@debug sassify.is-list($bool); //=> false
+/// @return {Bool}
+/// @param {list} $value - переменная, тип которой мы хотим сопоставить
+/// 	Sass-типу `List`
+@function is-list($value) {
+	@return is-type($value) == list or
+					is-type($value) == arglist;
+}
