@@ -1,0 +1,30 @@
+@use 'is-type' as *;
+
+/// @name is-map
+/// @since 1.0.0
+/// @access public
+/// @author Haba Kudzaev (therteenten)
+/// @example scss Пример использования в Sass (SCSS)
+/// 	$number: 0;
+/// 	$string: 'sassify';
+/// 	$color: #fff;
+/// 	$list: a b c;
+/// 	$map: (
+/// 		a: '0',
+/// 		b: '1'
+/// 	);
+/// 	$bool: true;
+/// 	$null: null;
+///
+/// 	@debug sassify.is-map($number); //=> false
+/// 	@debug sassify.is-map($string); //=> false
+/// 	@debug sassify.is-map($color); //=> false
+/// 	@debug sassify.is-map($list); //=> false
+/// 	@debug sassify.is-map($map); //=> true
+/// 	@debug sassify.is-map($bool); //=> false
+/// @return {Bool}
+/// @param {Map} $value - переменная, тип которой мы хотим сопоставить
+/// 	Sass-типу `Map`
+@function is-map($value) {
+	@return is-type($value) == map;
+}
