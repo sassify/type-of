@@ -1,0 +1,30 @@
+@use 'is-type' as *;
+
+/// @name is-string
+/// @since 1.0.0
+/// @access public
+/// @author Haba Kudzaev (therteenten)
+/// @example scss Пример использования в Sass (SCSS)
+/// 	$number: 0;
+/// 	$string: 'sassify';
+/// 	$color: #fff;
+/// 	$list: a b c;
+/// 	$map: (
+/// 		a: '0',
+/// 		b: '1'
+/// 	);
+/// 	$bool: true;
+/// 	$null: null;
+///
+/// 	@debug sassify.is-string($number); //=> false
+/// 	@debug sassify.is-string($string); //=> true
+/// 	@debug sassify.is-string($color); //=> false
+/// 	@debug sassify.is-string($list); //=> false
+/// 	@debug sassify.is-string($map); //=> false
+/// 	@debug sassify.is-string($bool); //=> false
+/// @return {Bool}
+/// @param {String} $value - переменная, тип которой мы хотим сопоставить
+/// 	Sass-типу `String`
+@function is-string($value) {
+	@return is-type($value) == string;
+}
