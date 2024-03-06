@@ -1,0 +1,33 @@
+@use 'is-number' as *;
+@use 'configs' as configs;
+
+/// @name is-time
+/// @since 1.0.0
+/// @access public
+/// @author Kitty Giraudel
+/// @link https://github.com/KittyGiraudel Kitty Giraudel (GitHub)
+/// @link https://css-tricks.com/snippets/sass/advanced-type-checking/ Источник функции
+/// @example scss Пример использования в Sass (SCSS)
+/// 	$number: 0;
+/// 	$string: 'sassify';
+/// 	$color: #fff;
+/// 	$list: a b c;
+/// 	$map: (
+/// 		a: '0',
+/// 		b: '1'
+/// 	);
+/// 	$bool: true;
+/// 	$time: .5s;
+///
+/// 	@debug sassify.is-time($number); //=> false
+/// 	@debug sassify.is-time($string); //=> false
+/// 	@debug sassify.is-time($color); //=> false
+/// 	@debug sassify.is-time($list); //=> false
+/// 	@debug sassify.is-time($map); //=> false
+/// 	@debug sassify.is-time($bool); //=> false
+/// 	@debug sassify.is-time($time); //=> true
+/// @return {Bool}
+/// @param {Number} $value
+@function is-time($value) {
+	@return is-number($value) and index(configs.$set-time-units, unit($value)) != null;
+}
