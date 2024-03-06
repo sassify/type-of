@@ -1,0 +1,30 @@
+@use 'is-type' as *;
+
+/// @name is-number
+/// @since 1.0.0
+/// @access public
+/// @author Haba Kudzaev (therteenten)
+/// @example scss Пример использования в Sass (SCSS)
+/// 	$number: 0;
+/// 	$string: 'sassify';
+/// 	$color: #fff;
+/// 	$list: a b c;
+/// 	$map: (
+/// 		a: '0',
+/// 		b: '1'
+/// 	);
+/// 	$bool: true;
+/// 	$null: null;
+///
+/// 	@debug sassify.is-number($number); //=> true
+/// 	@debug sassify.is-number($string); //=> false
+/// 	@debug sassify.is-number($color); //=> false
+/// 	@debug sassify.is-number($list); //=> false
+/// 	@debug sassify.is-number($map); //=> false
+/// 	@debug sassify.is-number($bool); //=> false
+/// @return {Bool}
+/// @param {Number} $value - переменная, тип которой мы хотим сопоставить
+/// 	Sass-типу `Number`
+@function is-number($value) {
+	@return is-type($value) == number;
+}
