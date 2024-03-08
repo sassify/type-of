@@ -9,9 +9,7 @@
     "test": "sass tests/index.test.scss:tests/index.test.css --no-source-map",
     "test-with-docs": "sass tests/index.test.scss:tests/index.test.css --no-source-map && npm run docs",
     "publish": "npm publish --access public",
-    "docs": "npx sassdoc . -d docs/",
-    "commit": "git cz",
-    "commit:all": "git add --all && git cz"
+    "docs": "npx sassdoc . -d docs/"
   },
   "repository": {
     "type": "git",
@@ -36,25 +34,7 @@
     "url": "https://github.com/sassify/type-of/issues"
   },
   "homepage": "https://github.com/sassify/type-of#readme",
-  "config": {
-    "commitizen": {
-      "path": "node_modules/cz-customizable"
-    },
-    "cz-customizable": {
-      "config": ".commitizen.js"
-    }
-  },
-  "husky": {
-    "hooks": {
-      "commit-msg": "commitlint -E HUSKY_GIT_PARAMS -g '.commitlint.js'"
-    }
-  },
   "dependencies": {
     "sass": "^1.71.1"
-  },
-  "devDependencies": {
-    "@commitlint/cli": "^19.0.3",
-    "cz-customizable": "^7.0.0",
-    "husky": "^9.0.11"
   }
 }
