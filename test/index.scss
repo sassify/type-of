@@ -1,0 +1,7 @@
+@use '../index.scss' as sassify;
+
+$var: 1310;
+
+@debug sassify.is-type($var);
+
+/* "#{$var}": #{sassify.is-type($var)} */

@@ -1,22 +1,20 @@
 {
-  "name": "@sassify/type-of",
-  "version": "1.0.1",
-  "description": "Набор утилит (функций на языке CSS-препроцессора Sass) для определения типов данных",
-  "main": "index.scss",
-  "scripts": {
-    "start": "npm run serve",
-    "serve": "sass tests/index.test.scss:tests/index.test.css --no-source-map --watch && npm run docs",
-    "test": "sass tests/index.test.scss:tests/index.test.css --no-source-map",
-    "test-with-docs": "sass tests/index.test.scss:tests/index.test.css --no-source-map && npm run docs",
-    "publish": "npm publish --access public",
-    "docs": "npx sassdoc . -d docs/"
-  },
-  "repository": {
+	"name": "@sassify/type-of",
+	"version": "1.0.2",
+	"description": "Набор утилит (функций на языке CSS-препроцессора Sass) для определения типов данных",
+	"main": "index.scss",
+	"scripts": {
+		"start": "npm run test",
+		"serve": "npx sass test/index.scss:test/index.css --no-source-map --watch",
+		"test": "npx sass test/index.scss:test/index.css --no-source-map",
+		"publish": "npm publish --access public",
+		"docs": "npm sassdoc . -d docs/"
+	},
+	"repository": {
     "type": "git",
     "url": "git+https://github.com/sassify/type-of.git"
   },
-  "keywords": [
-    "therteenten",
+	"keywords": [
     "sassify",
     "sass",
     "sass-mixins",
@@ -26,9 +24,10 @@
     "scss-mixins",
     "scss-functions",
     "scss-library",
-    "dart-sass"
-  ],
-  "author": "Haba Kudzaev (therteenten)",
+    "dart-sass",
+		"type-of"
+	],
+	"author": "Haba Kudzaev (therteenten)",
   "license": "MIT",
   "bugs": {
     "url": "https://github.com/sassify/type-of/issues"

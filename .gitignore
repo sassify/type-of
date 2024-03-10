@@ -1,6 +1,5 @@
 # Sassify
 *.css
-*.test.css
 docs/
 
 # Linux

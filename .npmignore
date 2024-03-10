@@ -1,8 +1,8 @@
 .github/
 .vscode/
-tests/
-.commitizen.js
-.commitlint.js
+node_modules/
+test/
 .editorconfig
 .gitignore
-CODEOWNERS
+.npmignore
+
