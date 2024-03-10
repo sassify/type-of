@@ -8,7 +8,7 @@
 		"serve": "npx sass test/index.scss:test/index.css --no-source-map --watch",
 		"test": "npx sass test/index.scss:test/index.css --no-source-map",
 		"publish": "npm publish --access public",
-		"docs": "npm sassdoc . -d docs/",
+		"docs": "npx sassdoc . -d docs/",
 		"commit": "git cz"
 	},
 	"repository": {
