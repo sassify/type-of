@@ -5,4 +5,5 @@ test/
 .editorconfig
 .gitignore
 .npmignore
-
+.commitizen.js
+.commitlint.js
